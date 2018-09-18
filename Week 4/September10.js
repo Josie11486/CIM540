@@ -18,12 +18,6 @@ function draw() {
 //   ellipse(x, y, i*d, i*d);
 // }
 
-// for(var i = 1; i < 5; i++)
-//   rect(x+i*30, y, d, d)
-//
-// for(var i = 1; i < 25; i++)
-//   line(100+i*10, 250, 100+i*10, 300)
-
 
 for(var i = 20; i < 400; i +=20){
   fill (255,0,0);
