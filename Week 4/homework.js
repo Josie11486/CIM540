@@ -5,26 +5,16 @@ var d = 30;
 
 
 function setup() {
-  createCanvas(500,500);
+  createCanvas(600,300);
   background(204);
-  noFill();
-}
-
-function draw() {
-  // commands that run as many times as defined.
-  //var counter = start_point ; counter < stop_point ; increment in counter
-// for(var i = 1; i < 21; i=i+2){
-//   ellipse(x, y, i*d, i*d);
-// }
-
-for(var i = 1; i < 5; i++)
-  rect(x+i*30, y, d, d)
-
-for(var i = 1; i < 25; i++)
-  line(100+i*10, 250, 100+i*10, 300)
-
-
-
-
+  strokeWeight(2);
 
 }
+
+function draw()
+1. two separeate loops or nested loops
+2. 1 loop but y value decreases by the height every time
+3. (extra credit)
+  loop 1:they all start at the same xy, y1, but have looping x2 y2
+    then add circles
+   loop 2: repeat the above but decreasing y values
