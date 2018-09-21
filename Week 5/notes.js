@@ -1,9 +1,16 @@
-function setup(){
+function setup() {
   createCanvas(300, 300);
   background(204);
 }
 
 function draw() {
+fill(255, 0, 0);
+if(mouseIsPressed && mouseButton == LEFT) {
+  fill(0, 255, 0);
+}
+
+ellipse(80, 80, 50, 50);
+}
   //drawing code
   // background(204)
   // ellipse(mouseX, mouseY, 10, 10);
@@ -43,15 +50,15 @@ function draw() {
 // ellipse(mouseX, mouseY, 10, 10);
 // }
 
-if(mouseY > 200) {
-fill(0, 255, 0); //green
-} else {
- if(mouseY > 100) {
- fill(0, 0, 255); //blue
- } else {
- fill(255, 0, 0); //red
- }
-}
-
-ellipse(mouseX, mouseY, 10, 10);
-}
+// if(mouseY > 200) {
+// fill(0, 255, 0); //green
+// } else {
+//  if(mouseY > 100) {
+//  fill(0, 0, 255); //blue
+//  } else {
+//  fill(255, 0, 0); //red
+//  }
+// }
+//
+// ellipse(mouseX, mouseY, 10, 10);
+//
