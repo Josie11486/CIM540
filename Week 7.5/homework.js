@@ -1,6 +1,8 @@
 var halloween;
 var ghosty;
 var skull;
+var offset = 0;
+var easing = 0.05;
 
 function preload() {
   halloween = loadImage('halloween.jpg');
@@ -10,7 +12,6 @@ function preload() {
 
 function setup() {
   createCanvas(800, 480);
-  background(204);
 }
 
 function draw() {
@@ -18,6 +19,8 @@ function draw() {
   image(skull, 328, 250);
 
   tint(255, 60);
+  var dx = (mouseX-150)-offset;
+  offset += dx*easing;
   image(ghosty, mouseX-120, mouseY-120);
 
   // tint(255, 20);
