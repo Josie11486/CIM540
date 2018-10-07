@@ -8,7 +8,7 @@ var easing = 0.02;
 var angle = 0;
 var faster;
 var slower;
-var s = 315;
+var s = 290;
 
 function preload() {
   halloween = loadImage('halloween.jpg');
@@ -60,9 +60,8 @@ pop();
 
   image(ghosty, x, y);
 
-  textSize(12);
+  textSize(15);
   fill(255);
-  text('ROUND', s, 410);
-  text('AND ROUND', s, 425);
-  text('AND ROUND SHE GOES', s, 440);
+  text('KEEP CLICKING', s, 410);
+  text('TO SPIN FASTER', s, 428);
 }
