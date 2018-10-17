@@ -12,6 +12,7 @@ var b = 460;
 var c = 480;
 var s = 30;
 var t = 555;
+var direction = 1;
 
 function preload() {
   halloween = loadImage('halloween.jpg');
@@ -19,7 +20,7 @@ function preload() {
   skull = loadImage('skull.png');
   candy = loadImage('candy.png')
   lightning = loadImage('lightning.png');
-  cheshire = loadImage('cheshire.png')
+  cheshire = loadImage('cheshire.png');
 }
 
 function setup() {
