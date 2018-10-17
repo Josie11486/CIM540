@@ -3,8 +3,8 @@ var ghosty;
 var skull;
 var x = 0;
 var y = 0;
-var z = 5;
-var easing = 0.02;
+var z = 1;
+var easing = 0.03;
 var angle = 0;
 var faster;
 var slower;
@@ -18,40 +18,21 @@ function preload() {
   ghosty = loadImage('ghosty.png');
   skull = loadImage('skull.png');
   candy = loadImage('candy.png')
-
+  lightning = loadImage('lightning.png');
+  cheshire = loadImage('cheshire.png')
 }
 
 function setup() {
   createCanvas(1100, 660);
-
-
-  slower = createButton('<');
-  slower.position(b, c);
-  slower.mousePressed(decreaseCount);
-
-  faster = createButton('>');
-  faster.position(b+30, c);
-  faster.mousePressed(increaseCount);
-
-  //when you click trick the skull will spin faster
-  //when you click treat, uhhhh
-}
-
-function increaseCount() {
-  z += 5;
-}
-
-function decreaseCount() {
-  z += -5;
 }
 
 function draw() {
 
-  push();
-
+  push(); //only applies tint to certain stuff//
   tint(255, 50);
   image(halloween, 0, 0);
 
+//skull
 push();
 imageMode(CENTER);
   translate(485, 430);
@@ -59,6 +40,18 @@ imageMode(CENTER);
   // rotate(angle);
   tint(255, 150);
   image(skull, 0, 0);
+
+  if(keyIsPressed) {
+    if(keyCode == LEFT_ARROW) {
+      z = z + 1;
+    }
+    else if(keyCode == RIGHT_ARROW) {
+      z = z - 1;
+    }
+    else if(keyCode == DOWN_ARROW) {
+      z = 0;
+    }
+  }
   angle += z;
 pop();
 
@@ -76,19 +69,30 @@ pop();
   textSize(15);
   fill(255);
   text('INSTRUCTIONS:', s, t);
-  text('CLICK THE ARROWS TO SPIN SKULL', s, t+25);
-  text('PRESS THE "T" KEY TO TRICK OR TREAT', s, t+50);
-  text('PRESS THE "L" KEY FOR SPOOKY LIGHTNING', s, t+75);
+  text('USE THE ARROW KEYS TO SPIN THE SKULL', s, t+25);
+  text('PRESS THE "C" KEY TO REVEAL THE CHESHIRE CAT', s, t+50);
+  text('CLICK THE MOUSE FOR SPOOKY LIGHTNING', s, t+75);
 
 //Make an instructions box,
-
+if(keyIsPressed) {
+  if(key=='c') {
+    image(cheshire, 595, 270);
+  }
+}
 pop();
 
-  // for(var d = 20; d < 1100; d+=200){
-  //   for(var e = 20; e < 620; e+=200){
-  //   image(candy, 0+d, 0+e);
-  //     }
-  //   }
+if (mouseIsPressed) {
+  for(var d = 0; d < 1000; d+=200){
+    for(var e = 0; e < 620; e+=200){
+    image(lightning, 0+d, 0+e);
+      }
+    }
+  }
 
+if(keyIsPressed) {
+  if(key=='c') {
+    image(cheshire, 595, 270);
+  }
+}
 
 }
