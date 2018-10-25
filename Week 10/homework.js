@@ -3,6 +3,8 @@
 var x = 80;
 var y  = 0;
 var speed = 5;
+var z = 0;
+var sunrise = 5;
 
 function setup() {
   createCanvas(480, 120);
@@ -26,7 +28,8 @@ function draw() {
     }
 
   if(currentTime > 5000) {
-    fill(255,255,0);
+    z += sunrise;
+    fill(255, 255, 0, z);
     noStroke();
     ellipse(400, 40, 30, 30);
   }
