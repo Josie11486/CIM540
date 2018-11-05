@@ -1,15 +1,18 @@
-var grass;
+// var grass;
 
-function preload() {
-  grass = loadImage('grass.jpg');
-}
+// function preload() {
+//   grass = loadImage('grass.jpg');
+// }
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(800, 800);
   background(230);
 }
 
 function draw() {
+
+  // image(grass, 10, 10);
+
   noStroke();
   fill(200);
   rect(10, 10, 50, 100);
