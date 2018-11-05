@@ -14,11 +14,14 @@ if(number == 1) {
 } else {
   fill(255, 0, 255);
 }
-
 rect(100, 10, 50, 50)
 rect(150, 10, 50, 50)
 rect(100, 60, 50, 50)
 rect(150, 60, 50, 50)
+}
+
+function rubiks(x, y, g, s) {
+
 }
 
 function rollDice() {
